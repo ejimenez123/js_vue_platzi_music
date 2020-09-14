@@ -5,14 +5,18 @@ const trackService = {}
 trackService.search = function(q) {
   const type = 'track'
 
-  return platziMusicService.get('/search', {
-//    params: { q: q, type: type }
-    params: { q, type } // simplified
-  })
-//  .them(function (res) {
-//    return res.data
-//  })
-  .then(res => res.data)
+  return new Promise(function(resolve, reject) {
+      const obj = {
+        tracks:{
+          items:[
+            {name:"abs1", artists: [{name:'xx1'}]},
+            {name:"abs2", artists: [{name:'xx2'}]},
+            {name:"abs3", artists: [{name:'xx3'}]}
+          ]
+        }
+      };
+      resolve(obj);
+  });
 
 }
 
