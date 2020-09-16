@@ -8,6 +8,7 @@ trackService.search = function(q) {
   return new Promise(function(resolve, reject) {
       const obj = {
         tracks:{
+          total: 33,
           items:[
             {id: 1, duration_ms: "228626", name:"abs1", artists: [{name:'xx1'}], album: {images:[{height:640, url:"src/img/img2.png", width:640},{height:640, url:"src/img/img2.png", width:640}]} },
             {id: 2, duration_ms: "228626", name:"abs2", artists: [{name:'xx2'}], album: {images:[{height:640, url:"src/img/img2.png", width:640},{height:640, url:"src/img/img2.png", width:640}]} },
